@@ -37,15 +37,15 @@ int main(void){
 
 signed short saisieEntier(void){
 	signed short var;
-	printf("enter a signed short:\n");
 	fflush(stdin);
+	printf("enter a signed short:\n");
 	scanf("%hd", &var);
 	return var;
 }
 char saisieOperateur(void){
 	char ope;
-	printf("enter an operator:\n");
 	fflush(stdin);
+	printf("enter an operator:\n");
 	scanf("%c", &ope);
 	return ope;
 }

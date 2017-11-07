@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 char leapYear(unsigned short year);
 /*
@@ -11,6 +10,7 @@ unsigned short verification(unsigned short year);
 int main()
 {
 	unsigned short year;
+	printf("\n**Welcome**\n");
 	do
 	{
 		printf("enter a year\n");

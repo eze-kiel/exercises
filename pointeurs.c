@@ -30,5 +30,4 @@ void inverser_nombres(signed short *nb1, signed short *nb2){
 	tmp = *nb2;
 	*nb2 = *nb1;
 	*nb1 = tmp;
-
 }
