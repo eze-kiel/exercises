@@ -9,8 +9,8 @@ float saisieTroisiemeEntier(void);
 
 int main(){
 
-	signed short type;
-	float a, b, c, result, discriminant, signe;
+	signed short type, sign;
+	float a, b, c, result, discriminant, x1, x2;
 
 	printf("what kind of result do you want to solve?\n1: first order\n2: second order\n");
 	fflush(stdin);
@@ -31,8 +31,23 @@ int main(){
 			c = saisieTroisiemeEntier();
 
 			discriminant = (b*b) + (4*a*c);
-			signe = signe(discriminant);
-			printf("le signe du discriminant est: %f\n", signe);
+			sign = signe(discriminant);
+			if (sign == -1)
+			{
+				printf("no solution\n");
+			}
+			else if(sign == 0)
+			{
+				result = ((-b)/a);
+				printf("the result is : x = %f\n", result);
+			}
+			else
+			{
+				x1 = (-(b*b)+sqrt(discriminant))/2*a;
+				x2 = (-(b*b)-sqrt(discriminant))/2*a;
+				printf("the solutions are x1 = %f and x2 = %f\n", x1, x2);
+
+			}
 
 			break;
 		default:
@@ -69,18 +84,18 @@ float saisieTroisiemeEntier(void){
 	return a;
 }
 signed short signe(float nbr){
-	signed short signe;
+	signed short sign;
 
 	if (nbr<0){
-		signe = -1;
+		sign = -1;
 	}
 	else{
-		if (nrb=0){
-			signe = 0;
+		if (nbr=0){
+			sign = 0;
 		}
 		else{
-			signe = 1;
+			sign = 1;
 		}
 	}
-	return signe;
+	return sign;
 }
